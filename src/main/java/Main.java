@@ -49,6 +49,10 @@ public class Main extends ListenerAdapter {
             event.getChannel().sendMessage(smug[r.nextInt(smug.length -1)]).queue();
             event.getChannel().sendMessage("Poyo?").queue();
         }
+        if(event.getMessage().getContentRaw().equalsIgnoreCase("!disapoint")){
+            event.getChannel().sendMessage("https://cdn.discordapp.com/attachments/187638685683023872/498162103132225536/" +
+                    "SmartSelect_20181006-105324_iFunny_.jpg").queue();
+        }
         if(event.getMessage().getContentRaw().equalsIgnoreCase("!help")){
             event.getChannel().sendMessage("https://cdn.discordapp.com/attachments/364" +
                     "145544706260992/495641584159686657/SmartSelect_20180929-124924_iFunny_.jpg").queue();
