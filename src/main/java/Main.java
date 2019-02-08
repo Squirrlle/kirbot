@@ -49,7 +49,7 @@ public class Main extends ListenerAdapter {
             event.getChannel().sendMessage(smug[r.nextInt(smug.length -1)]).queue();
             event.getChannel().sendMessage("Poyo?").queue();
         }
-        if(event.getMessage().getContentRaw().equalsIgnoreCase("!disapoint")){
+        if(event.getMessage().getContentRaw().equalsIgnoreCase("!disappoint")){
             event.getChannel().sendMessage("https://cdn.discordapp.com/attachments/187638685683023872/498162103132225536/" +
                     "SmartSelect_20181006-105324_iFunny_.jpg").queue();
         }
@@ -64,8 +64,8 @@ public class Main extends ListenerAdapter {
             event.getChannel().sendMessage("https://78.media.tumblr.com/b57280b8d0ee4e7cebf5fbd495c246b9/" +
                     "tumblr_p6ft3ekn0H1u9w5zpo1_640.gif").queue();
         }
-        if(event.getMessage().getContentRaw().equalsIgnoreCase("!Sm4sh")){
-            event.getChannel().sendMessage("Add role Sm4sh to " + event.getAuthor().getName()).queue();
+        if(event.getMessage().getContentRaw().equalsIgnoreCase("!Ultimate")){
+            event.getChannel().sendMessage("Add role Ultimate to " + event.getAuthor().getName()).queue();
         }
         if(event.getMessage().getContentRaw().equalsIgnoreCase("!Melee")){
             event.getChannel().sendMessage("Add role Melee to " + event.getAuthor().getName()).queue();
@@ -83,9 +83,9 @@ public class Main extends ListenerAdapter {
 
     @Override
     public void onGuildMessageReceived(GuildMessageReceivedEvent event){
-        if(event.getMessage().getContentRaw().equalsIgnoreCase("!Sm4sh")){
+        if(event.getMessage().getContentRaw().equalsIgnoreCase("!Ultimate")){
             Member m = event.getMember();
-            Role game = event.getGuild().getRolesByName("Sm4sh", true).get(0);
+            Role game = event.getGuild().getRolesByName("Ultimate", true).get(0);
             event.getGuild().getController().addSingleRoleToMember(m, game).queue();
         }
         if(event.getMessage().getContentRaw().equalsIgnoreCase("!Melee")){
